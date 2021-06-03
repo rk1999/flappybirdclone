@@ -1,0 +1,114 @@
+body {
+  display: flex;
+}
+
+.game__container {
+  width: 500px;
+  height: 730px;
+  position: absolute;
+  left: 80px;
+}
+
+.border-left {
+  width: 80px;
+  height: 790px;
+  position: absolute;
+  background-color: white;
+  z-index: +2;
+}
+
+.border-right {
+  width: 80px;
+  height: 790px;
+  position: absolute;
+  left: 580px;
+  background-color: white;
+  z-index: +2;
+}
+
+.border-top {
+  width: 660px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  background-color: white;
+  z-index: +2;
+}
+
+.sky {
+  width: 500px;
+  height: 580px;
+  position: absolute;
+  background-color: skyblue;
+}
+
+.ground {
+  width: 500px;
+  height: 150px;
+  position: absolute;
+  top: 580px;
+  background-color: burlywood;
+  z-index: +1;
+}
+
+.bird {
+  width: 60px;
+  height: 45px;
+  position: absolute;
+  left: 220px;
+  bottom: 100px;
+  background-color: yellow;
+}
+
+.obstacle {
+  width: 60px;
+  height: 300px;
+  position: absolute;
+  background-color: green;
+}
+
+.topObstacle {
+  width: 60px;
+  height: 300px;
+  position: absolute;
+  transform: rotate(180deg);
+  background-color: green;
+}
+
+@keyframes slideright {
+  from {
+    background-position: 10000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+@-webkit-keyframes slideright {
+  from {
+    background-position: 10000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+.ground__container {
+  height: 150px;
+  width: 580px;
+  position: absolute;
+  left: 80px;
+  background-color: violet;
+}
+
+.ground__moving {
+  position: absolute;
+  top: 580px;
+  width: 100%;
+  height: 150px;
+  background-color: teal;
+  background-repeat: repeat-x;
+  animation: slideright 100s infinite linear;
+  -webkit-animation: slideright 100s infinite linear;
+  z-index: +1;
+}
